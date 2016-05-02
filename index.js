@@ -2,20 +2,22 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 const config = require('./config/config');
 const compiler = require('./compilers');
+const tasks = require('./tasks');
 
 const app = express();
-app.set('views', config.dir);
-app.use(express.static(`${config.dir}/public`));
+app.set('views', config.template.dir);
+app.use(express.static(config.template.public));
 
 app.engine('.hbs', exphbs({
-  layoutsDir: config.dir,
-  defaultLayout: 'layout',
+  layoutsDir: config.template.dir,
+  defaultLayout: config.template.layout,
   extname: '.hbs'
 }));
 app.set('view engine', '.hbs');
 
 app.get('/', (req, res) => {
-  res.render('home');
+  const posts = tasks.getPosts(config.post);
+  res.render('home', { posts: posts });
 });
 
 app.get('/*', (req, res) => {
@@ -32,4 +34,4 @@ app.get('/*', (req, res) => {
 });
 
 
-app.listen(config.port);
+app.listen(config.connection.port);

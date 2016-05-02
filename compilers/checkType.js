@@ -1,7 +1,7 @@
 'use strict';
 const glob = require('glob');
 const path = require('path');
-const dataDir = require('../config/config').dataDir;
+const dataDir = require('../config/config').data.dir;
 
 const init = (param, callback) => {
   const pathCheck = path.join(dataDir, '**', `${param}.md`);

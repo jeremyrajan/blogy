@@ -4,15 +4,15 @@ const path = require('path');
 const glob = require('glob');
 
 const createFile = (title, config, type, callback) => {
-  const fileName = type === 'post' ?  `${moment().format(config.timestamp)}-${title.join('-')}.md` : `${title.join('-')}.md`;
-  const dir = type === 'post' ? config.postDir : config.pageDir;
+  const fileName = type === 'post' ?  `${moment().format(config.post.timestamp)}-${title.join('-')}.md` : `${title.join('-')}.md`;
+  const dir = type === 'post' ? config.post.dir : config.page.dir;
   const fullPath = path.join(dir, fileName);
   fs.writeFileSync(fullPath, '');
   return callback(null, fullPath);
 };
 
 const findFile = (file, config) => {
- return(glob.sync(path.join(config.dataDir, '**/*.md'))[0]);
+ return(glob.sync(path.join(config.data.dir, '**/*.md'))[0]);
 };
 
 const deleteFile = (file, config, callback) => {
