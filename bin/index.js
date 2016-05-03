@@ -18,7 +18,7 @@ const argv = require('yargs')
     })
     .argv;
 const common = require('../common');
-const config = require('../config/config');
+const config = require('../config');
 let title = null;
 
 if (argv._.length < 2){

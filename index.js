@@ -1,6 +1,6 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
-const config = require('./config/config');
+const config = require('./config');
 const compiler = require('./compilers');
 const tasks = require('./tasks');
 
