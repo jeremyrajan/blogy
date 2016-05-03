@@ -11,7 +11,7 @@ module.exports = {
     dir: `${process.cwd()}/data/posts`,
     timestamp: 'YYYY-MM-DD', // this is used to create post URL.
     limit: 5,
-    excerpt: 50
+    excerpt: 600
   },
   page: {
     dir: `${process.cwd()}/data/pages`

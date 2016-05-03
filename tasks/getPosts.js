@@ -12,8 +12,8 @@ module.exports = (post) => {
     data.push({
       title: getTitle(path.basename(posts[i])),
       link: getLink(path.basename(posts[i])),
-      body: fs.readFileSync(posts[i]).toString()
+      body: `${fs.readFileSync(posts[i]).toString().substr(0, post.excerpt)}...`
     });
   }
   return data;
-}
+};

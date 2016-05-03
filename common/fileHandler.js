@@ -4,7 +4,7 @@ const path = require('path');
 const glob = require('glob');
 
 const createFile = (title, config, type, callback) => {
-  const fileName = type === 'post' ?  `${moment().format(config.post.timestamp)}-${title.join('-')}.md` : `${title.join('-')}.md`;
+  const fileName = type === 'post' ?  `${moment().format(config.post.timestamp)}-${title.join('-').toLowerCase()}.md` : `${title.join('-')}.md`;
   const dir = type === 'post' ? config.post.dir : config.page.dir;
   const fullPath = path.join(dir, fileName);
   fs.writeFileSync(fullPath, '');
