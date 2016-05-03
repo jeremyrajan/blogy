@@ -48,7 +48,7 @@ if (operation === 'create') {
 
 if (operation === 'delete') {
   common.fileHandler.deleteFile(argv.file, config, (err, result) => {
-    if (err) return common.errHandler(err, 'err');
+    if (err) return common.msgHandler(err, 'err');
     common.msgHandler(result, 'warn');
   });
 }

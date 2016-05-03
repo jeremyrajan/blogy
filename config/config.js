@@ -10,7 +10,8 @@ module.exports = {
   types: ['page', 'post'],
   post: {
     dir: `${process.cwd()}/data/posts`,
-    timestamp: 'YYYY-MM-DD', // this is used to create post URL.
+    timestamp: 'YYYY-MM-DD-hh:mm:ss', // this is used to create post URL.
+    displayDate: 'DD-MM-YYYY hh:mm',
     limit: 5,
     excerpt: 600
   },

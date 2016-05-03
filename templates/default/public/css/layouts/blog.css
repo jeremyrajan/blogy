@@ -200,3 +200,11 @@ h3 {
   font-family: tahoma;
   text-decoration: none;
 }
+
+.date{
+  font-weight: bold;
+}
+
+.post{
+  clear:both;
+}
