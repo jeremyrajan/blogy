@@ -4,15 +4,14 @@
         <header class="post-header">
             <img class="post-avatar" alt="blogy" height="48" width="48" src="{{../config.author.avatar}}">
             <h2 class="post-title">{{title}}</h2>
-
-            <p class="post-meta">
-                By <a href="#" class="post-author">Blogy</a> under
-                <a class="post-category post-category-design" href="#">CSS</a> <a class="post-category post-category-pure" href="#">Pure</a>
-            </p>
         </header>
 
         <div class="post-description">{{{body}}}</div>
-        <a href="/{{link}}">Read More...</a>
+        <p class="post-meta left">
+            By <a href="#" class="post-author">Blogy</a>
+            <!-- <a class="post-category post-category-design" href="#">CSS</a> <a class="post-category post-category-pure" href="#">Pure</a> -->
+        </p>
+        <a href="/{{link}}" class="read-more right">Read More</a>
     </section>
   {{/each}}
 </div>

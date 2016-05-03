@@ -95,7 +95,7 @@ h3 {
 .post-title {
     font-size: 2em;
     color: #222;
-    margin-bottom: 0.2em;
+    margin: 0;
 }
 .post-avatar {
     border-radius: 50px;
@@ -105,7 +105,8 @@ h3 {
 .post-description {
     font-family: Georgia, "Cambria", serif;
     color: #444;
-    line-height: 1.8em;
+    line-height: 1.4em;
+    padding: 20px 0;
 }
 .post-meta {
     color: #999;
@@ -175,10 +176,27 @@ h3 {
 }
 
 /** custom styles**/
+.left{
+  float: left;
+}
+
+.right{
+  float:right;
+}
 .post-title::first-letter{
   text-transform: uppercase;
 }
 
 .content{
   font-family: Georgia, "Cambria", serif !important;
+}
+
+
+.read-more{
+  padding: 2px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: tahoma;
+  text-decoration: none;
 }
