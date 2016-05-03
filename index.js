@@ -14,6 +14,7 @@ app.engine('.hbs', exphbs({
   extname: '.hbs'
 }));
 app.set('view engine', '.hbs');
+app.locals.config = config; // set config as global, to be accessed in layouts/posts/pages
 
 app.get('/', (req, res) => {
   const posts = tasks.getPosts(config.post);

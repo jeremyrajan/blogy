@@ -1,11 +1,8 @@
-<h1>BlogY: Home</h1>
-
 <div class="posts">
   {{#each posts}}
     <section class="post">
         <header class="post-header">
-            <img class="post-avatar" alt="blogy" height="48" width="48" src="/img/nodejs-logo.png">
-
+            <img class="post-avatar" alt="blogy" height="48" width="48" src="{{../config.author.avatar}}">
             <h2 class="post-title">{{title}}</h2>
 
             <p class="post-meta">

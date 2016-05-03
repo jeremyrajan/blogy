@@ -1,5 +1,6 @@
 const path = require('path');
 module.exports = {
+  title: 'My BlogY',
   template: {
     dir: path.join(process.cwd(), 'templates', 'default'),
     public: path.join(process.cwd(), 'templates', 'default', 'public'),
@@ -21,5 +22,9 @@ module.exports = {
   },
   connection: {
     port: 3000
+  },
+  author: {
+    name: 'Your Name',
+    avatar: '/img/nodejs-logo.png'
   }
 };

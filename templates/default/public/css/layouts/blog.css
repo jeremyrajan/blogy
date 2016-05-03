@@ -173,3 +173,12 @@ h3 {
         bottom: 0;
     }
 }
+
+/** custom styles**/
+.post-title::first-letter{
+  text-transform: uppercase;
+}
+
+.content{
+  font-family: Georgia, "Cambria", serif !important;
+}
