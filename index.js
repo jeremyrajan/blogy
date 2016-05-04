@@ -1,8 +1,8 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 const config = require('./config');
-const compiler = require('./compilers');
-const tasks = require('./tasks');
+const compiler = require('./src/compilers');
+const tasks = require('./src/tasks');
 
 const app = express();
 app.set('views', config.template.dir);

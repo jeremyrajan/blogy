@@ -1,27 +1,28 @@
 #!/usr/bin/env node
+
 'use strict';
 const argv = require('yargs')
-      .options({
-      't': {
-        alias: 'title',
-        demand: true,
-        default: 'My Post Title',
-        describe: 'Title for post/page',
-        type: 'array'
-      },
-      'f': {
-        alias: 'file',
-        demand: false,
-        describe: 'Page or post to delete',
-        type: 'string'
-      },
-    })
-    .argv;
-const common = require('../common');
+  .options({
+    t: {
+      alias: 'title',
+      demand: true,
+      default: 'My Post Title',
+      describe: 'Title for post/page',
+      type: 'array'
+    },
+    f: {
+      alias: 'file',
+      demand: false,
+      describe: 'Page or post to delete',
+      type: 'string'
+    },
+  })
+  .argv;
+const common = require('../src/common');
 const config = require('../config');
 let title = null;
 
-if (argv._.length < 2){
+if (argv._.length < 2) {
   common.msgHandler('Invalid arguments. Exiting...', 'err');
   process.exit();
 }
@@ -35,7 +36,7 @@ if (config.ops.indexOf(operation) === -1 || config.types.indexOf(type) === -1) {
   common.msgHandler('Invalid arguments. Exiting...', 'err');
   process.exit();
 }
-if (typeof title === null){
+if (title === null) {
   common.msgHandler('Title is invalid. Exiting...', 'err');
   process.exit();
 }
