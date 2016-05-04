@@ -22,6 +22,8 @@ cd my-blog && blogy setup
 This will setup a base project with defaults.
 
 There are 3 main folders, while setting up your shiny blogY engine.
+
+
 1. config
 2. templates
 3. data
