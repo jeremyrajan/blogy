@@ -20,6 +20,8 @@ const argv = require('yargs')
   .argv;
 const common = require('../src/common');
 const config = require('../config');
+const ops = ['create', 'delete'];
+const types = ['page', 'post'];
 let title = null;
 
 if (argv._.length < 2) {
@@ -32,7 +34,7 @@ const type = argv._[1];
 if (!!argv.title) {
   title = argv.title;
 }
-if (config.ops.indexOf(operation) === -1 || config.types.indexOf(type) === -1) {
+if (ops.indexOf(operation) === -1 || types.indexOf(type) === -1) {
   common.msgHandler('Invalid arguments. Exiting...', 'err');
   process.exit();
 }
