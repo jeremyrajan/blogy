@@ -78,4 +78,4 @@ For pages, replace `post` with `page`. Easy as that!
 Please report issues here: https://github.com/jeremyrajan/blogy/issues
 
 ## Contributions
-If you have any new feature request, please setup a tracker for it or if you want to work blogY with me, I will be more than happy :). Ping me at jeremyrajan[at]gmail[dot]com
+If you have any new feature request, please setup a tracker for it or if you want to work on blogY with me, I will be more than happy :). Ping me at jeremyrajan[at]gmail[dot]com
