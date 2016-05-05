@@ -29,7 +29,7 @@ const npmi = require('npmi');
 let title = null;
 
 const installDependencies = (lib, dir) => {
-  common.msgHandler(npmi.NPM_VERSION, 'warn'); // prints the installed npm version used by npmi
+  common.msgHandler(`NPM version: ${npmi.NPM_VERSION}`, 'warn'); // prints the installed npm version used by npmi
   const options = {
     name: lib,
     path: dir,
