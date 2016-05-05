@@ -20,6 +20,21 @@
     "npmi": "^2.0.1",
     "yargs": "^4.6.0"
   },
+  "keywords": [
+    "blogy",
+    "expressjs",
+    "blogging",
+    "platform",
+    "jekyll",
+    "handlebars"
+  ],
+  "bugs": {
+    "url": "https://github.com/jeremyrajan/blogy/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeremyrajan/blogy"
+  },
   "bin": {
     "bloggy": "bin/index.js"
   },
