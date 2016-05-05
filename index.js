@@ -4,7 +4,7 @@ const config = require('./config');
 const compiler = require('./src/compilers');
 const tasks = require('./src/tasks');
 
-const init = (config = config) => {
+const init = (config) => {
   const app = express();
   app.set('views', config.template.dir);
   app.use(express.static(config.template.public));

@@ -35,7 +35,8 @@ const installDependencies = (lib, dir) => {
     path: dir,
     forceInstall: false,
     npmLoad: {
-      loglevel: 'silent'
+      loglevel: 'silent',
+      save: true
     }
   };
   npmi(options, (err, result) => {
