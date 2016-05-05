@@ -4,7 +4,7 @@ const path = require('path');
 const glob = require('glob');
 
 const createFile = (title, config, type, callback) => {
-  const fileName = type === 'post' ?  `${moment().format(config.post.timestamp)}-${title.join('-').toLowerCase()}.md` : `${title.join('-')}.md`;
+  const fileName = type === 'post' ? `${moment().format(config.post.timestamp)}-${title.join('-').toLowerCase()}.md` : `${title.join('-')}.md`;
   const dir = type === 'post' ? config.post.dir : config.page.dir;
   const fullPath = path.join(dir, fileName);
   fs.writeFileSync(fullPath, '');
@@ -12,7 +12,7 @@ const createFile = (title, config, type, callback) => {
 };
 
 const findFile = (file, config) => {
- return(glob.sync(path.join(config.data.dir, '**/*.md'))[0]);
+  return (glob.sync(path.join(config.data.dir, '**/*.md'))[0]);
 };
 
 const deleteFile = (file, config, callback) => {

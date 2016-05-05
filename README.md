@@ -1,5 +1,7 @@
 # BlogY - A Lightweight Blogging Engine
 
+[![Build Status](https://travis-ci.org/jeremyrajan/blogy.svg?branch=master)](https://travis-ci.org/jeremyrajan/blogy)
+
 This is BlogY (pronounced, blogee), a lightweight blogging engine built upon ExpressJS, Handlebars and Markdown. The aim being to design a very simple engine, with minimal setup. It is as simple as 1.2.3.. :)
 
 ## About
