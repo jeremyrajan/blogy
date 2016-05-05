@@ -9,7 +9,7 @@ BlogY has been inspired from both Ghost and Jekyll. I love Ghost platform, for i
 
 ## Install
 ```
-npm install [-g] blogy --save
+npm install -g blogy
 ```
 You might want to install it globally to get access to the CLI api, for creating and deleting posts/pages.
 ## Setup

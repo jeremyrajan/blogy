@@ -1,6 +1,6 @@
 {
   "name": "blogy",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple blogging tool built upon Express, Handlebars & Markdown",
   "main": "index.js",
   "scripts": {
@@ -36,7 +36,7 @@
     "url": "https://github.com/jeremyrajan/blogy"
   },
   "bin": {
-    "bloggy": "bin/index.js"
+    "blogy": "bin/index.js"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
