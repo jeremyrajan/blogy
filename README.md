@@ -30,6 +30,7 @@ There are 3 main folders, while setting up your shiny blogY engine.
 2. templates
 3. data
 
+
 **Config** folder is where your platform configuration resides. If you look at the `index.js` inside the folder, you can see all the default configurations. You can go ahead and change things, as per your requirements. They are pretty self-explainatory :). Some of the configurations that you can set are:
 
 1. Blog Title
@@ -37,6 +38,7 @@ There are 3 main folders, while setting up your shiny blogY engine.
 3. Timestamp display
 4. Author information, such as avatar/name
 5. Template information.
+
 
 As you can see, 99% of the config goes via this file; which gives you guys full authority to change things and see the results. But please make sure, **"With great powers, comes great responsibility"**. For ex: if you change the url structure for the posts, there will be cases that blogY can't find your posts, unless the file names are updated. But dont worry, we will add a task for this in the future.
 
