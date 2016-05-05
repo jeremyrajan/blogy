@@ -17,7 +17,7 @@ mkdir my-blog
 ```
 
 ```
-cd my-blog && blogy setup
+cd my-blog && blogy new <name of your blog>
 ```
 This will setup a base project with defaults.
 
