@@ -14,14 +14,16 @@ npm install -g blogy
 You might want to install it globally to get access to the CLI api, for creating and deleting posts/pages.
 ## Setup
 To setup,
-```
-mkdir my-blog
-```
 
 ```
-cd my-blog && blogy new <name of your blog>
+blogy new <name of your blog>
 ```
-This will setup a base project with defaults.
+This will setup a base project with defaults. After the install is successful, cd into the directory and try running:
+
+```
+node index.js
+```
+This will startup a server on localhost:3000. If you don't have any posts, the list will be empty.
 
 There are 3 main folders, while setting up your shiny blogY engine.
 

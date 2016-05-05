@@ -45,8 +45,6 @@ const installDependencies = (lib, dir) => {
       else if (err.code === npmi.INSTALL_ERR) common.msgHandler(`Install error: ${err}`, 'err');
       return common.msgHandler(err.message, 'err');
     }
-    // installed
-    common.msgHandler(`${options.name}@${options.version}' installed successfully in '${path.resolve(options.path)}`);
   });
 };
 

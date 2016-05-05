@@ -4,7 +4,7 @@ const config = require('./config');
 const compiler = require('./src/compilers');
 const tasks = require('./src/tasks');
 
-const init = (config) => {
+const init = (config, callback) => {
   const app = express();
   app.set('views', config.template.dir);
   app.use(express.static(config.template.public));
@@ -35,6 +35,7 @@ const init = (config) => {
     });
   });
   app.listen(config.connection.port);
+  callback();
 };
 
 module.exports = {
