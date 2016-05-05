@@ -61,7 +61,10 @@ if (argv._[0] === 'new') {
   }
   fs.copySync(path.join(__dirname, '..', 'bootstrap'), dir);
   const initFile = path.resolve(process.env.HOME, '.npm-init')
+  fs.mkdirsSync(`${dir}/data/posts`);
+  fs.mkdirsSync(`${dir}/data/pages`);
 
+  common.msgHandler('Enter your blog information below:', 'success');
   npmInit(dir, initFile, (er, data) => {
     installDependencies('blogy', dir);
   });
