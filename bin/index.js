@@ -86,6 +86,7 @@ if (argv._[0] === 'new') {
 
   if (operation === 'create') {
     common.fileHandler.createFile(title, config, type, (err, filePath) => {
+      if(err) return common.msgHandler(err, 'err');
       common.msgHandler(`${type.toUpperCase()} created, at ${filePath}!`, 'success');
     });
   }
