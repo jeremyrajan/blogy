@@ -9,9 +9,9 @@ describe('create File', () => {
   beforeEach(() => {
     config = require('../../config');
     config.post.dir = path.join(__dirname, '..', 'data', 'posts');
-    config.post.dir = path.join(__dirname, '..', 'data', 'pages');
+    config.page.dir = path.join(__dirname, '..', 'data', 'pages');
     fs.mkdirsSync(config.post.dir);
-    fs.mkdirsSync(config.post.dir);
+    fs.mkdirsSync(config.page.dir);
   });
   it('should exit, if the config is empty', () => {
     config = null;
@@ -63,7 +63,7 @@ describe('delete File', () => {
     config.post.dir = path.join(__dirname, '..', 'data', 'posts');
     config.page.dir = path.join(__dirname, '..', 'data', 'pages');
     fs.mkdirsSync(config.post.dir);
-    fs.mkdirsSync(config.post.dir);
+    fs.mkdirsSync(config.page.dir);
     fileTxt = fs.writeFileSync(path.join(config.post.dir, 'test.txt'), '');
     fileMd = fs.writeFileSync(path.join(config.post.dir, 'test.md'), '');
   });
