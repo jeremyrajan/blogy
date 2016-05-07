@@ -2,14 +2,16 @@
 const expect = require('chai').expect;
 const fileHandler = require('../../src/common/fileHandler');
 const path = require('path');
-const fs = require('fs');
+const fs = require('fs-extra');
 
 describe('create File', () => {
   let title, config, type, file;
   beforeEach(() => {
     config = require('../../config');
     config.post.dir = path.join(__dirname, '..', 'data', 'posts');
-    config.page.dir = path.join(__dirname, '..', 'data', 'pages');
+    config.post.dir = path.join(__dirname, '..', 'data', 'pages');
+    fs.mkdirsSync(config.post.dir);
+    fs.mkdirsSync(config.post.dir);
   });
   it('should exit, if the config is empty', () => {
     config = null;
@@ -60,6 +62,8 @@ describe('delete File', () => {
     config = require('../../config');
     config.post.dir = path.join(__dirname, '..', 'data', 'posts');
     config.page.dir = path.join(__dirname, '..', 'data', 'pages');
+    fs.mkdirsSync(config.post.dir);
+    fs.mkdirsSync(config.post.dir);
     fileTxt = fs.writeFileSync(path.join(config.post.dir, 'test.txt'), '');
     fileMd = fs.writeFileSync(path.join(config.post.dir, 'test.md'), '');
   });
