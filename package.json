@@ -4,7 +4,8 @@
   "description": "A simple blogging tool built upon Express, Handlebars & Markdown",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "test": "gulp"
   },
   "author": "jeremyrajan",
   "license": "MIT",
@@ -40,10 +41,12 @@
     "blogy": "bin/index.js"
   },
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-eslint": "^2.0.0",
+    "chai": "^3.5.0",
     "eslint": "^2.8.0",
     "eslint-config-airbnb": "8.0.0",
-    "eslint-plugin-import": "^1.6.1"
+    "eslint-plugin-import": "^1.6.1",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^2.0.0",
+    "gulp-mocha": "^2.2.0"
   }
 }
