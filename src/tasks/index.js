@@ -1,6 +1,7 @@
 /* eslint-disable */
 module.exports = {
-  getDates: require('./getDate'),
-  getLinks: require('./getLink'),
-  getPosts: require('./getPosts')
+  getDate: require('./getDate'),
+  getLink: require('./getLink'),
+  getPosts: require('./getPosts'),
+  getTitle: require('./getTitle')
 };

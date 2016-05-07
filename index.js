@@ -3,6 +3,7 @@ const exphbs = require('express-handlebars');
 const config = require('./config');
 const compiler = require('./src/compilers');
 const tasks = require('./src/tasks');
+const path = require('path');
 
 const init = (config, callback) => {
   const app = express();
@@ -27,7 +28,9 @@ const init = (config, callback) => {
     compiler.type(param, (err, result) => {
       if (result.type) {
         res.render(result.type, {
-          data: compiler.parse(result.file)
+          body: compiler.parse(result.file),
+          title: tasks.getTitle(path.basename(result.file)),
+          date: tasks.getDate(path.basename(result.file), config.post.displayDate)
         });
       } else {
         res.render('404');

@@ -208,3 +208,22 @@ h3 {
 .post{
   clear:both;
 }
+
+#page h1, #post h1{
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+
+.divider{
+  border-bottom: 1px solid #ccc;
+}
+
+.published{
+  clear: both;
+  float: right;
+  background: rgb(61, 79, 93);
+  padding: 5px;
+  color: white;
+  font-family: tahoma;
+  font-size: 10px;
+}
