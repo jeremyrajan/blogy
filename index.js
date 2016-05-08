@@ -25,7 +25,7 @@ const init = (config, callback) => {
 
   app.get('/*', (req, res) => {
     const param = req.params[0];
-    compiler.type(param, (err, result) => {
+    compiler.type(param, config.data.dir, (err, result) => {
       if (result.type) {
         res.render(result.type, {
           body: compiler.parse(result.file),

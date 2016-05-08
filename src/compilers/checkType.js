@@ -1,9 +1,8 @@
 'use strict';
 const glob = require('glob');
 const path = require('path');
-const dataDir = require('../../config').data.dir;
 
-const init = (param, callback) => {
+const init = (param, dataDir, callback) => {
   const pathCheck = path.join(dataDir, '**', '*.md');
   const files = glob.sync(pathCheck);
   let type = null;
