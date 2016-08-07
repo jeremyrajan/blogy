@@ -1,6 +1,6 @@
 {
   "name": "blogy",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A simple blogging tool built upon Express, Handlebars & Markdown",
   "main": "index.js",
   "scripts": {
