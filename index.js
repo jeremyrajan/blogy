@@ -26,15 +26,12 @@ const init = (config, callback) => {
   app.get('/*', (req, res) => {
     const param = req.params[0];
     compiler.type(param, config.data.dir, (err, result) => {
-      if (result.type) {
-        res.render(result.type, {
-          body: compiler.parse(result.file),
-          title: tasks.getTitle(path.basename(result.file)),
-          date: tasks.getDate(path.basename(result.file), config.post.displayDate)
-        });
-      } else {
-        res.render('404');
-      }
+      if (!result.type) res.render('404');
+      res.render(result.type, {
+        body: compiler.parse(result.file),
+        title: tasks.getTitle(path.basename(result.file)),
+        date: tasks.getDate(path.basename(result.file), config.post.displayDate)
+      });
     });
   });
   app.listen(config.connection.port);
