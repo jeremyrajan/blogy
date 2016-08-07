@@ -2,6 +2,6 @@
 module.exports = {
   getDate: require('./getDate'),
   getLink: require('./getLink'),
-  getPosts: require('./getPosts'),
+  get: require('./get'),
   getTitle: require('./getTitle')
 };

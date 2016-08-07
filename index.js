@@ -17,9 +17,10 @@ const init = (config, callback) => {
   }));
   app.set('view engine', '.hbs');
   app.locals.config = config; // set config as global, to be accessed in layouts/posts/pages
+  app.locals.pages = tasks.get(config.page);
 
   app.get('/', (req, res) => {
-    const posts = tasks.getPosts(config.post);
+    const posts = tasks.get(config.post);
     res.render('home', { posts: posts });
   });
 
