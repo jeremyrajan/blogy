@@ -14,7 +14,9 @@ module.exports = {
     excerpt: 600 // excerpt, substring basically.
   },
   page: { // Page configurations
-    dir: `${process.cwd()}/data/pages` // The directory where your pages will be saved.
+    dir: `${process.cwd()}/data/pages`, // The directory where your pages will be saved.
+    limit: 5,
+    excerpt: 0
   },
   data: { // Data directory, which will host both posts/pages or any other information.
     dir: `${process.cwd()}/data`

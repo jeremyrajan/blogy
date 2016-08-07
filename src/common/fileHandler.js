@@ -18,6 +18,7 @@ const createFile = (title, config, type, callback) => {
 };
 
 const deleteFile = (file, config, callback) => {
+  if (!file) return callback('Not a valid file!', null);
   if (path.extname(file) !== '.md') {
     return callback('Not a valid file!', null);
   }
