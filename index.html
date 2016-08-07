@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Blogy by jeremyrajan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Blogy</h1>
+      <h2 class="project-tagline">A lightweight express blogging engine in NodeJS + Handlebars  + Markdown</h2>
+      <a href="https://github.com/jeremyrajan/blogy" class="btn">View on GitHub</a>
+      <a href="https://github.com/jeremyrajan/blogy/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/jeremyrajan/blogy/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="blogy---a-lightweight-express-blogging-engine-in-nodejs--handlebars---markdown" class="anchor" href="#blogy---a-lightweight-express-blogging-engine-in-nodejs--handlebars---markdown" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>BlogY - A lightweight express blogging engine in NodeJS + Handlebars  + Markdown</h1>
+
+<p><a href="https://travis-ci.org/jeremyrajan/blogy"><img src="https://travis-ci.org/jeremyrajan/blogy.svg?branch=master" alt="Build Status"></a>
+<a href="https://badge.fury.io/js/blogy"><img src="https://badge.fury.io/js/blogy.svg" alt="npm version"></a>
+<a href="https://david-dm.org/jeremyrajan/blogy"><img src="https://david-dm.org/jeremyrajan/blogy.svg" alt="david.dm"></a></p>
+
+<p><a href="https://nodei.co/npm/blogy/"><img src="https://nodei.co/npm/blogy.png?downloads=true&amp;downloadRank=true&amp;stars=true" alt="NPM"></a></p>
+
+<p>This is BlogY (pronounced, blogee), a lightweight blogging engine built upon ExpressJS, Handlebars and Markdown. The aim being to design a very simple engine, with minimal setup. It is as simple as 1.2.3.. :)</p>
+
+<h2>
+<a id="about" class="anchor" href="#about" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About</h2>
+
+<p>BlogY has been inspired from both Ghost and Jekyll. I love Ghost platform, for its simplicity and ability to change configs. And Jekyll, on how easy it is generate a website and create posts/pages. You can say, its a crossover between both blogging platforms. Rather than providing a backend for it, you can change the config file and it will do the job for you (as long as, its under your control).</p>
+
+<h2>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Install</h2>
+
+<pre><code>npm install -g blogy
+</code></pre>
+
+<p>You might want to install it globally to get access to the CLI api, for creating and deleting posts/pages.</p>
+
+<h2>
+<a id="setup" class="anchor" href="#setup" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setup</h2>
+
+<p>To setup,</p>
+
+<pre><code>blogy new &lt;name of your blog&gt;
+</code></pre>
+
+<p>This will setup a base project with defaults. After the install is successful, cd into the directory and try running:</p>
+
+<pre><code>node index.js
+</code></pre>
+
+<p>This will startup a server on localhost:3000. If you don't have any posts, the list will be empty.</p>
+
+<p>There are 3 main folders, while setting up your shiny blogY engine.</p>
+
+<ol>
+<li>config</li>
+<li>templates</li>
+<li>data</li>
+</ol>
+
+<p><strong>Config</strong> folder is where your platform configuration resides. If you look at the <code>index.js</code> inside the folder, you can see all the default configurations. You can go ahead and change things, as per your requirements. They are pretty self-explainatory :). Some of the configurations that you can set are:</p>
+
+<ol>
+<li>Blog Title</li>
+<li>URL structure for posts</li>
+<li>Timestamp display</li>
+<li>Author information, such as avatar/name</li>
+<li>Template information.</li>
+</ol>
+
+<p>As you can see, 99% of the config goes via this file; which gives you guys full authority to change things and see the results. But please make sure, <strong>"With great powers, comes great responsibility"</strong>. For ex: if you change the url structure for the posts, there will be cases that blogY can't find your posts, unless the file names are updated. But dont worry, we will add a task for this in the future.</p>
+
+<p><strong>Templates</strong> folder consists of templates, separated in folders. For instance with default setup, you will see a default template folder inside the directory. I am using <a href="http://purecss.io">PureCSS</a> layout in it. As always, its your decision on choosing which folder and where. But it is always good to follow the same pattern when creating new templates. For instance, a template consists of:</p>
+
+<ol>
+<li>Public Folder: Which hosts all your static assets</li>
+<li>layout.hbs: Your master template/layout</li>
+<li>page.hbs: Page template</li>
+<li>post.hbs: Post template</li>
+<li>home.hbs: The main, with list of posts.</li>
+<li>404.hbs: The usual deal :).</li>
+</ol>
+
+<p>And yes, we use handlebars as our templating engine, because its awesome!</p>
+
+<p>Next up, <strong>data</strong> folder. As the name suggests, this guy will store all your posts/pages when created. There is a separate folder for posts and pages, so that its easy to organize. And yes, you can markdown for your posts/pages which makes it even better! Again, this is a structure I follow so that things are organized and well kept.</p>
+
+<h2>
+<a id="oh-yea-cli" class="anchor" href="#oh-yea-cli" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Oh yea! CLI!</h2>
+
+<p>BlogY also provides, out of the box CLI api for you to create or delete post/page. Again, its <em>easy peasy, lemon squeasy!</em>. Lets list down:</p>
+
+<p>Navigate to the folder, where you have setup blogY.</p>
+
+<h4>
+<a id="create-post" class="anchor" href="#create-post" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Create Post</h4>
+
+<pre><code>blogy create post --t=&lt;Title goes here&gt;
+</code></pre>
+
+<h4>
+<a id="create-page" class="anchor" href="#create-page" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Create Page</h4>
+
+<pre><code>blogy create page --t=&lt;Title goes here&gt;
+</code></pre>
+
+<h4>
+<a id="delete-postpage" class="anchor" href="#delete-postpage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Delete Post/Page</h4>
+
+<p>The easiest thing to do is, navigate to directory and delete the said post. Or try</p>
+
+<pre><code>blogy delete post --f=&lt;Name of the file&gt;
+</code></pre>
+
+<p>For pages, replace <code>post</code> with <code>page</code>. Easy as that!</p>
+
+<h2>
+<a id="issues" class="anchor" href="#issues" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Issues</h2>
+
+<p>Please report issues here: <a href="https://github.com/jeremyrajan/blogy/issues">https://github.com/jeremyrajan/blogy/issues</a></p>
+
+<h2>
+<a id="contributions" class="anchor" href="#contributions" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributions</h2>
+
+<p>If you have any new feature request, please setup a tracker for it or if you want to work on blogY with me, I will be more than happy :). Ping me at jeremyrajan[at]gmail[dot]com</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/jeremyrajan/blogy">Blogy</a> is maintained by <a href="https://github.com/jeremyrajan">jeremyrajan</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
