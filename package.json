@@ -1,6 +1,6 @@
 {
   "name": "blogy",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "A simple blogging tool built upon Express, Handlebars & Markdown",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,7 @@
     "moment": "^2.17.1",
     "npmi": "^2.0.1",
     "remove-markdown": "^0.1.0",
-    "yargs": "^6.5.0"
+    "yargs": "^6.6.0"
   },
   "keywords": [
     "blogy",
@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "eslint": "^3.11.1",
+    "eslint": "^3.13.1",
     "eslint-config-airbnb": "13.0.0",
     "eslint-plugin-import": "^2.2.0",
     "gulp": "^3.9.1",
