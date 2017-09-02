@@ -1,6 +1,6 @@
 {
   "name": "blogy",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "A simple blogging tool built upon Express, Handlebars & Markdown",
   "main": "index.js",
   "scripts": {
@@ -10,17 +10,17 @@
   "author": "jeremyrajan",
   "license": "MIT",
   "dependencies": {
-    "chalk": "^1.1.3",
-    "express": "^4.14.0",
+    "chalk": "^2.1.0",
+    "express": "^4.15.4",
     "express-handlebars": "^3.0.0",
-    "fs-extra": "^1.0.0",
-    "glob": "^7.1.1",
-    "init-package-json": "^1.9.4",
+    "fs-extra": "^4.0.1",
+    "glob": "^7.1.2",
+    "init-package-json": "^1.10.1",
     "marked": "^0.3.6",
-    "moment": "^2.17.1",
-    "npmi": "^2.0.1",
-    "remove-markdown": "^0.1.0",
-    "yargs": "^6.6.0"
+    "moment": "^2.18.1",
+    "npmi": "^3.0.0",
+    "remove-markdown": "^0.2.2",
+    "yargs": "^8.0.2"
   },
   "keywords": [
     "blogy",
@@ -41,13 +41,13 @@
     "blogy": "bin/index.js"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "eslint": "^3.13.1",
+    "chai": "^4.1.2",
+    "eslint": "^4.6.0",
     "eslint-config-airbnb": "13.0.0",
-    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-import": "^2.7.0",
     "gulp": "^3.9.1",
-    "gulp-eslint": "^3.0.1",
-    "gulp-mocha": "^3.0.1",
-    "glob": "^7.1.1"
+    "gulp-eslint": "^4.0.0",
+    "gulp-mocha": "^4.3.1",
+    "glob": "^7.1.2"
   }
 }
