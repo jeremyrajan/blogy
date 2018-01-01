@@ -24,7 +24,7 @@ describe('check type API', () => {
       expect(err).to.be.null;
       expect(filePath).to.not.be.null;
       checkType(param, config.data.dir, (err, result) => {
-        expect(result).to.be.defined;
+        expect(result).to.exist;
         expect(result.file).to.not.be.null;
         expect(result.type).to.be.equal(type);
         expect(err).to.be.null;
@@ -36,7 +36,7 @@ describe('check type API', () => {
   it('should return null, if it cant find the file', () => {
     param = 'my-post';
     checkType(param, config.data.dir, (err, result) => {
-      expect(result).to.be.defined;
+      expect(result).to.exist;
       expect(result.file).to.be.null;
       expect(result.type).to.be.null;
       expect(err).to.be.null;

@@ -16,7 +16,7 @@ describe('create File', () => {
   it('should exit, if the config is empty', () => {
     config = null;
     fileHandler.createFile(title, config, type, (err, result) => {
-      expect(err).to.be.defined;
+      expect(err).to.be.exist;
       expect(result).to.be.null;
     });
   });
@@ -24,7 +24,7 @@ describe('create File', () => {
   it('should exit, if the title is not valid', () => {
     title = null;
     fileHandler.createFile(title, config, type, (err, result) => {
-      expect(err).to.be.defined;
+      expect(err).to.be.exist;
       expect(result).to.be.null;
     });
   });
@@ -34,7 +34,7 @@ describe('create File', () => {
     type = 'post';
     fileHandler.createFile(title, config, type, (err, result) => {
       expect(err).to.be.null;
-      expect(result).to.be.defined;
+      expect(result).to.exist;
       const file = path.basename(result);
       const year = new Date().getFullYear().toString();
       expect(file.startsWith(year)).to.be.true;
@@ -47,7 +47,7 @@ describe('create File', () => {
     type = 'page';
     fileHandler.createFile(title, config, type, (err, result) => {
       expect(err).to.be.null;
-      expect(result).to.be.defined;
+      expect(result).to.exist;
       const file = path.basename(result);
       const year = new Date().getFullYear().toString();
       expect(file.startsWith(year)).to.be.false;
@@ -70,7 +70,7 @@ describe('delete File', () => {
 
   it('should abort, if the file is not .md', () => {
     fileHandler.deleteFile(fileTxt, config, (err, result) => {
-      expect(err).to.be.defined;
+      expect(err).to.exist;
       expect(result).to.be.null;
     });
   });
@@ -78,7 +78,7 @@ describe('delete File', () => {
   it('should err out, if doesnt exist', () => {
     fileMd = 'test.md';
     fileHandler.deleteFile(fileMd, config, (err, result) => {
-      expect(err).to.be.defined;
+      expect(err).to.exist;
       expect(result).to.be.null;
     });
   });
@@ -86,7 +86,7 @@ describe('delete File', () => {
   it('should delete the file, if the settings are valid', () => {
     fileHandler.deleteFile(path.join(config.post.dir, 'test.md'), config, (err, result) => {
       expect(err).to.be.null;
-      expect(result).to.be.defined;
+      expect(result).to.exist;
       expect(result).to.be.equal('Deleted.');
     });
   });
