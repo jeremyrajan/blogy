@@ -4,7 +4,7 @@
 [![npm version](https://badge.fury.io/js/blogy.svg)](https://badge.fury.io/js/blogy)
 [![david.dm](https://david-dm.org/jeremyrajan/blogy.svg)](https://david-dm.org/jeremyrajan/blogy)
 
-[![NPM](https://nodei.co/npm/blogy.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/blogy/)
+[![NPM](https://nodei.co/npm/blogy.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/blogy/) [![Greenkeeper badge](https://badges.greenkeeper.io/jeremyrajan/blogy.svg)](https://greenkeeper.io/)
 
 This is BlogY (pronounced, blogee), a lightweight blogging engine built upon ExpressJS, Handlebars and Markdown. The aim being to design a very simple engine, with minimal setup. It is as simple as 1.2.3.. :)
 
