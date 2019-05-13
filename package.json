@@ -20,7 +20,7 @@
     "moment": "^2.20.1",
     "npmi": "^4.0.0",
     "remove-markdown": "^0.2.2",
-    "yargs": "^10.0.3"
+    "yargs": "^13.2.4"
   },
   "keywords": [
     "blogy",
