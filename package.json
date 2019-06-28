@@ -46,7 +46,7 @@
     "eslint-config-airbnb": "13.0.0",
     "eslint-plugin-import": "^2.8.0",
     "gulp": "^3.9.1",
-    "gulp-eslint": "^4.0.0",
+    "gulp-eslint": "^6.0.0",
     "gulp-mocha": "^5.0.0",
     "glob": "^7.1.2"
   }
